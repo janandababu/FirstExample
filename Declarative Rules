@@ -1,0 +1,63 @@
+AUGUST 26, 2009
+Declarative Rules
+Ques: How many declarative rule types we have in PRPC and what are they?
+Ans:
+These can be created under Decision Category.These can be created under decision category. 
+
+     These are Auto excecutable rules in PRPC. 
+
+We create declarative rules and use properties in it. 
+
+Wherever we use the properties which involved in declarative rules, PRPC automatically 
+excecutes the respocive declarative rules. 
+
+Thus these declarative rules will perform validations or Calculations or excecute the activities etc.
+
+         There are 6 types.
+
+     1.Declare Expression
+     2.Declare Constraints
+     3.Declare OnChange
+     4.Declare Trigger
+     5.Declare Index
+     6.Declare Page (Data Page)
+	 
+Ques: What does a Declarative Rule do?
+Ans:
+-0-0-0-0-
+
+Declarative Rules in PEGA:
+
+1.These are automatic execution rules, (For example, If First Name=Last Name display an error message)
+ these rules will be executed anywhere in our application wherever you use (The first Name & Last Name )Property
+
+2.These rules are created under Decision Category,these are auto executable rules in PRPC.
+
+3.Thus these Declarative rules will perform Validations,Calculations & Execute the activities
+-0-0-0-0-0
+           Declarative Rule allows the automatic processing to occur as and when required.
+
+Ques: What is Forward Chaining and What is Backward Chaining?
+Ans:
+           FC - The target property gets recalculated Whenever input is changed.
+                    For Example, (Target Property)C= A+B(Input Properties), whenever A or B value gets changed then C gets recalculated.
+           BC - The target property gets recalculated whenever the target property is used/referred.
+                    For Example, C=A+B,  whenever C is used then C gets recalculated.
+					
+					
+					
+
+Ques: What rule is the basic foundation for backward chaining in PRPC ?
+Ans:
+         "Property-Seek-Method" of type Rule-Method. Generally, We use this method in activities.
+
+Ques: What are the limitations on Declare Expressions?
+Ans:
+          Mainly three, thet are
+   1. In PRPC versions from 4.x till 5.3, Declarative Expressions must be declared on a top level page(Work  Obect Page).
+       **This limitation has been removed from V5.4 onwards.  
+  
+    2. Rule execution cannot get turned off - We dont have to choose, the system does it.
+  
+   3. The dependency network will not update, based on external data changes.
+       **For example, when an expression A = B+C, if B is set by an external system(using RDB call), A will not get updated. To do so, a manual step is required in this case.
